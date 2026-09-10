@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUMÉA - Instagram Campaign Post</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts for Editorial Elegance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Social Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        lumea: {
+                            sand: '#F7F4F0',
+                            taupe: '#E8E2D8',
+                            dark: '#2A2725',
+                            accent: '#C5A880',
+                            blush: '#F4ECE4',
+                            gold: '#D4AF37'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Cormorant Garamond"', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #1E1C1A;
+            color: #2A2725;
+        }
+        .serif-font {
+            font-family: 'Cormorant Garamond', serif;
+        }
+        /* Custom subtle float animation for the serum bottle */
+        @keyframes float {
+            0% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-8px) rotate(0.5deg); }
+            100% { transform: translateY(0px) rotate(0deg); }
+        }
+        .floating-product {
+            animation: float 6s ease-in-out infinite;
+        }
+        /* Soft luxury shadow */
+        .luxury-shadow {
+            box-shadow: 0 30px 60px -12px rgba(42, 39, 37, 0.12), 0 18px 36px -18px rgba(42, 39, 37, 0.08);
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.65);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.8);
+        }
+    </style>
+</head>
+<body class="min-h-full flex flex-col justify-between items-center py-8 px-4 selection:bg-[#C5A880] selection:text-white">
+
+    <header class="w-full max-w-xl text-center mb-6">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#2A2725] text-lumea-sand text-xs tracking-widest uppercase mb-2 font-medium">
+            <i class="fa-regular fa-gem text-lumea-accent"></i> Portfolio Concept Project
+        </div>
+        <h1 class="text-2xl md:text-3xl font-serif text-lumea-sand font-normal tracking-wide">LUMÉA Beauty Campaign</h1>
+        <p class="text-xs text-stone-400 mt-1">Professional Instagram Editorial Design Mockup (1080 × 1080 px format)</p>
+    </header>
+
+    <main class="w-full max-w-[500px] bg-white rounded-2xl luxury-shadow overflow-hidden border border-stone-200">
+        
+        <!-- Instagram Post Header (UI Frame) -->
+        <div class="flex items-center justify-between px-4 py-3 bg-white border-b border-stone-100">
+            <div class="flex items-center gap-3">
+                <div class="w-9 h-9 rounded-full bg-gradient-to-tr from-amber-100 via-[#C5A880] to-stone-300 p-0.5">
+                    <div class="w-full h-full bg-white rounded-full flex items-center justify-center font-serif font-bold text-sm text-[#2A2725]">
+                        L
+                    </div>
+                </div>
+                <div>
+                    <div class="flex items-center gap-1">
+                        <span class="text-xs font-semibold text-stone-900 tracking-tight">lumea.skin</span>
+                        <i class="fa-solid fa-circle-check text-[10px] text-blue-500"></i>
+                    </div>
+                    <span class="text-[10px] text-stone-400">Sponsored</span>
+                </div>
+            </div>
+            <button aria-label="More options" class="text-stone-600 hover:text-stone-900 transition-colors p-1">
+                <i class="fa-solid fa-ellipsis text-sm"></i>
+            </button>
+        </div>
+
+        <!-- Instagram 1:1 Square Post Canvas -->
+        <div id="post-canvas" class="relative w-full aspect-square bg-[#F7F4F0] overflow-hidden flex flex-col justify-between p-8 md:p-12 select-none">
+            
+            <!-- Background Aesthetic Accents (Soft radial lighting & geometric framing) -->
+            <div class="absolute inset-0 pointer-events-none">
+                <!-- Warm gradient glow -->
+                <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 rounded-full bg-gradient-to-br from-[#E8E2D8] to-[#F4ECE4] opacity-70 blur-2xl"></div>
+                <!-- Subtle thin gold border frame -->
+                <div class="absolute inset-5 border border-[#C5A880]/20 rounded-lg"></div>
+            </div>
+
+            <!-- Top Brand Watermark / Monogram -->
+            <div class="relative z-10 flex justify-between items-start">
+                <div>
+                    <span class="text-[11px] uppercase tracking-[0.3em] text-[#8C7A6B] font-medium block">New Collection</span>
+                    <span class="text-xs font-serif italic text-stone-500">Botanical Science</span>
+                </div>
+                <div class="tracking-[0.4s] font-serif text-lg font-semibold text-[#2A2725]">
+                    LUMÉA
+                </div>
+            </div>
+
+            <!-- Centerpiece: Product Bottle Artwork -->
+            <div class="relative z-10 my-auto flex justify-center items-center py-4">
+                <div class="relative floating-product">
+                    <!-- Soft drop shadow under bottle -->
+                    <div class="absolute -bottom-6 left-1/2 -translate-x-1/2 w-24 h-5 bg-stone-900/10 rounded-full blur-md"></div>
+                    
+                    <!-- Fictional Serum Bottle SVG/HTML Construction -->
+                    <svg width="140" height="230" viewBox="0 0 140 230" fill="none" xmlns="http://www.w3.org/2000/svg" class="drop-shadow-xl">
+                        <!-- Dropper Cap / Collar -->
+                        <rect x="58" y="10" width="24" height="22" rx="3" fill="#3D3835"/>
+                        <rect x="62" y="3" width="16" height="8" rx="2" fill="#C5A880"/>
+                        <path d="M65 32H75V42H65V32Z" fill="#E8E2D8"/>
+                        
+                        <!-- Glass Bottle Body (Frosted Translucent Look) -->
+                        <rect x="25" y="42" width="90" height="175" rx="16" fill="url(#glassGradient)" stroke="#FFFFFF" stroke-width="1.5"/>
+                        
+                        <!-- Internal Serum Liquid Level -->
+                        <path d="M26.5 100C26.5 95 30 90 35 90H105C110 90 113.5 95 113.5 100V201C113.5 208 108 213.5 101 213.5H39C32 213.5 26.5 208 26.5 201V100Z" fill="url(#serumGradient)" opacity="0.85"/>
+                        
+                        <!-- Minimalist Label -->
+                        <rect x="38" y="75" width="64" height="110" rx="6" fill="#FFFFFF" fill-opacity="0.9" stroke="#E8E2D8" stroke-width="0.5"/>
+                        <circle cx="70" cy="100" r="10" fill="#F7F4F0" stroke="#C5A880" stroke-width="0.7"/>
+                        <text x="70" y="103" font-family="serif" font-size="10" fill="#2A2725" text-anchor="middle" font-weight="bold">L</text>
+                        
+                        <text x="70" y="125" font-family="sans-serif" font-size="7" letter-spacing="2" fill="#8C7A6B" text-anchor="middle">LUMÉA</text>
+                        <text x="70" y="142" font-family="serif" font-size="9" fill="#2A2725" text-anchor="middle" font-style="italic">Radiance</text>
+                        <text x="70" y="153" font-family="sans-serif" font-size="5" letter-spacing="1" fill="#A89F91" text-anchor="middle">ELIXIR SERUM</text>
+                        <line x1="55" y1="165" x2="85" y2="165" stroke="#E8E2D8" stroke-width="0.5"/>
+                        <text x="70" y="172" font-family="sans-serif" font-size="4.5" fill="#A89F91" text-anchor="middle">30 ml / 1 fl. oz.</text>
+
+                        <!-- Highlights & Reflections for Glass Realism -->
+                        <path d="M30 48C30 45 33 42 37 42H44V210H37C33 210 30 207 30 204V48Z" fill="white" opacity="0.4"/>
+                        <path d="M100 42H103C107 42 110 45 110 48V204C110 207 107 210 103 210H100V42Z" fill="white" opacity="0.15"/>
+
+                        <!-- Gradients definition -->
+                        <defs>
+                            <linearGradient id="glassGradient" x1="25" y1="42" x2="115" y2="217" gradientUnits="userSpaceOnUse">
+                                <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.9"/>
+                                <stop offset="50%" stop-color="#FAF7F2" stop-opacity="0.7"/>
+                                <stop offset="100%" stop-color="#EBE3D8" stop-opacity="0.85"/>
+                            </linearGradient>
+                            <linearGradient id="serumGradient" x1="26.5" y1="90" x2="113.5" y2="213.5" gradientUnits="userSpaceOnUse">
+                                <stop offset="0%" stop-color="#FCEFD2" stop-opacity="0.6"/>
+                                <stop offset="100%" stop-color="#E2C188" stop-opacity="0.8"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+            </div>
+
+            <!-- Typography & Call to Action (Minimalist layout) -->
+            <div class="relative z-10 text-center space-y-3">
+                <div class="space-y-1">
+                    <h2 class="serif-font text-3xl md:text-4xl font-light text-[#2A2725] tracking-tight">
+                        Glow, Your Way.
+                    </h2>
+                    <p class="text-xs md:text-sm text-stone-600 font-light tracking-wide">
+                        A simple ritual for radiant skin.
+                    </p>
+                </div>
+
+                <!-- Subtle CTA Pill -->
+                <div class="pt-2">
+                    <span class="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-[#2A2725] text-lumea-sand text-xs font-medium tracking-widest uppercase shadow-sm hover:bg-stone-800 transition-all cursor-pointer">
+                        Discover LUMÉA <i class="fa-solid fa-arrow-right text-[10px] text-lumea-accent"></i>
+                    </span>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Instagram Action Bar -->
+        <div class="px-4 py-3 flex items-center justify-between bg-white border-t border-stone-100">
+            <div class="flex items-center gap-4 text-stone-800 text-xl">
+                <button aria-label="Like post" class="hover:text-rose-500 transition-colors"><i class="fa-regular fa-heart"></i></button>
+                <button aria-label="Comment on post" class="hover:text-stone-600 transition-colors"><i class="fa-regular fa-comment"></i></button>
+                <button aria-label="Share post" class="hover:text-stone-600 transition-colors"><i class="fa-regular fa-paper-plane"></i></button>
+            </div>
+            <div class="text-stone-800 text-xl">
+                <button aria-label="Save post" class="hover:text-stone-600 transition-colors"><i class="fa-regular fa-bookmark"></i></button>
+            </div>
+        </div>
+
+        <!-- Likes count & Caption snippet -->
+        <div class="px-4 pb-4 bg-white text-xs space-y-2">
+            <div class="font-semibold text-stone-900">
+                1,482 likes
+            </div>
+            <div class="text-stone-700 leading-relaxed">
+                <span class="font-semibold text-stone-900 mr-2">lumea.skin</span> 
+                Designed for purity. Our signature daily facial serum deeply nourishes and restores your skin's natural luminance with clean botanical actives. ✨ <span class="text-[#C5A880]">#LumeaSkin #CleanBeauty #GlowYourWay #SkincareRoutine</span>
+            </div>
+            <div class="text-[11px] text-stone-400 uppercase tracking-wide pt-1">
+                View all 48 comments • 2 hours ago
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="w-full max-w-xl text-center mt-6 text-stone-400 text-xs space-y-1">
+        <p>Created for professional social media campaign presentation.</p>
+        <p class="text-[10px] text-stone-500">This is a fictional concept project created as an AI-assisted social media design sample.</p>
+    </footer>
+
+</body>
+</html>

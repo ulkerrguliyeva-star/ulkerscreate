@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MORA — Modern Coffee Brand Identity & Packaging Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts for Sophisticated Editorial Warmth -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        mora: {
+                            sand: '#F4EFEA',
+                            cream: '#E9E3DC',
+                            dark: '#1C1917',
+                            clay: '#B87D59',
+                            terracotta: '#9E5B3B',
+                            taupe: '#A89F95',
+                            border: '#D8CEC3'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Cormorant Garamond"', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #12100E;
+            color: #1C1917;
+        }
+        .serif-title {
+            font-family: 'Cormorant Garamond', serif;
+        }
+        /* Custom luxury shadow */
+        .brand-shadow {
+            box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.35), 0 15px 30px -15px rgba(0, 0, 0, 0.2);
+        }
+        /* Subtle float animation for packaging mockup */
+        @keyframes floatSlow {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-6px); }
+            100% { transform: translateY(0px); }
+        }
+        .animate-float {
+            animation: floatSlow 6s ease-in-out infinite;
+        }
+        /* Hide scrollbars for slick interactive views */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="min-h-full flex flex-col justify-between items-center py-12 px-4 selection:bg-[#B87D59] selection:text-white">
+
+    <!-- Portfolio Header -->
+    <header class="w-full max-w-5xl text-center mb-12">
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#1C1917] text-mora-sand text-xs tracking-[0.25em] uppercase mb-4 font-medium border border-stone-800">
+            <i class="fa-regular fa-compass text-mora-clay"></i> Brand Identity & Packaging Portfolio Concept
+        </div>
+        <h1 class="text-4xl md:text-5xl font-serif text-mora-sand font-normal tracking-wide">MORA COFFEE ROASTERS</h1>
+        <p class="text-xs md:text-sm text-stone-400 mt-2 tracking-wider max-w-xl mx-auto font-light">
+            A minimalist, sophisticated yet warm visual identity designed for a contemporary specialty coffee brand.
+        </p>
+    </header>
+
+    <!-- Main Portfolio Showcase Container -->
+    <main class="w-full max-w-5xl flex flex-col space-y-16">
+
+        <!-- ================= SECTION 1: LOGO SYSTEM & BRAND MARK ================= -->
+        <section class="w-full bg-[#F4EFEA] rounded-3xl brand-shadow p-8 md:p-14 relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-80 h-80 bg-gradient-to-br from-[#E9E3DC] to-transparent opacity-60 rounded-full blur-3xl pointer-events-none"></div>
+            
+            <div class="flex justify-between items-start mb-10 border-b border-stone-300/60 pb-4">
+                <div>
+                    <span class="text-[11px] uppercase tracking-[0.3em] text-[#9E5B3B] font-semibold block mb-1">01 / Visual Identity</span>
+                    <h2 class="serif-title text-3xl md:text-4xl font-normal text-[#1C1917]">The Logo & Typography System</h2>
+                </div>
+                <div class="text-xs font-mono text-stone-500 uppercase tracking-widest hidden sm:block">
+                    Wordmark & Monogram
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+                <!-- Primary Logo Display Card -->
+                <div class="bg-white rounded-2xl p-10 border border-stone-200/80 flex flex-col items-center justify-center min-h-[280px] shadow-sm relative group">
+                    <div class="absolute top-4 left-4 text-[10px] uppercase tracking-widest text-stone-400 font-mono">Primary Wordmark</div>
+                    
+                    <!-- MORA Logo Design -->
+                    <div class="text-center space-y-2 my-auto">
+                        <div class="serif-title text-5xl md:text-6xl font-normal tracking-[0.22em] text-[#1C1917] pl-3">
+                            MORA
+                        </div>
+                        <div class="text-[10px] uppercase tracking-[0.4em] text-[#9E5B3B] font-medium pt-1">
+                            Specialty Coffee • Est. 2026
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Secondary Monogram Card -->
+                <div class="bg-[#1C1917] text-mora-sand rounded-2xl p-10 border border-stone-800 flex flex-col items-center justify-center min-h-[280px] shadow-sm relative">
+                    <div class="absolute top-4 left-4 text-[10px] uppercase tracking-widest text-stone-500 font-mono">Secondary Monogram</div>
+                    
+                    <!-- Monogram Symbol -->
+                    <div class="w-20 h-20 rounded-full border border-stone-700 flex items-center justify-center mb-4">
+                        <span class="serif-title text-3xl font-semibold tracking-wider text-mora-sand">M</span>
+                    </div>
+                    <div class="text-xs tracking-[0.3em] uppercase text-stone-400 font-light">
+                        Minimalist Seal
+                    </div>
+                </div>
+            </div>
+
+            <!-- Color Palette Swatches -->
+            <div class="mt-10 pt-8 border-t border-stone-300/60">
+                <span class="text-[11px] uppercase tracking-[0.25em] text-stone-600 font-semibold block mb-4">Brand Color Palette</span>
+                <div class="grid grid-cols-2 sm:grid-cols-5 gap-4">
+                    <div class="space-y-1.5">
+                        <div class="h-14 rounded-xl bg-[#1C1917] border border-black/10 shadow-inner"></div>
+                        <div class="text-[11px] font-semibold text-stone-900">Espresso Black</div>
+                        <div class="text-[10px] text-stone-500 font-mono">#1C1917</div>
+                    </div>
+                    <div class="space-y-1.5">
+                        <div class="h-14 rounded-xl bg-[#B87D59] border border-black/10 shadow-inner"></div>
+                        <div class="text-[11px] font-semibold text-stone-900">Warm Clay</div>
+                        <div class="text-[10px] text-stone-500 font-mono">#B87D59</div>
+                    </div>
+                    <div class="space-y-1.5">
+                        <div class="h-14 rounded-xl bg-[#9E5B3B] border border-black/10 shadow-inner"></div>
+                        <div class="text-[11px] font-semibold text-stone-900">Terracotta</div>
+                        <div class="text-[10px] text-stone-500 font-mono">#9E5B3B</div>
+                    </div>
+                    <div class="space-y-1.5">
+                        <div class="h-14 rounded-xl bg-[#E9E3DC] border border-black/10 shadow-inner"></div>
+                        <div class="text-[11px] font-semibold text-stone-900">Soft Cream</div>
+                        <div class="text-[10px] text-stone-500 font-mono">#E9E3DC</div>
+                    </div>
+                    <div class="space-y-1.5 col-span-2 sm:col-span-1">
+                        <div class="h-14 rounded-xl bg-[#F4EFEA] border border-black/10 shadow-inner"></div>
+                        <div class="text-[11px] font-semibold text-stone-900">Pure Sand</div>
+                        <div class="text-[10px] text-stone-500 font-mono">#F4EFEA</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ================= SECTION 2: BUSINESS CARD DESIGN ================= -->
+        <section class="w-full bg-[#EAE2D8] rounded-3xl brand-shadow p-8 md:p-14 relative overflow-hidden">
+            <div class="flex justify-between items-start mb-10 border-b border-stone-300 pb-4">
+                <div>
+                    <span class="text-[11px] uppercase tracking-[0.3em] text-[#9E5B3B] font-semibold block mb-1">02 / Collateral</span>
+                    <h2 class="serif-title text-3xl md:text-4xl font-normal text-[#1C1917]">Professional Business Card</h2>
+                </div>
+                <div class="text-xs font-mono text-stone-500 uppercase tracking-widest hidden sm:block">
+                    Front & Back Mockup
+                </div>
+            </div>
+
+            <!-- Card Showcase Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                
+                <!-- Front of Card (Minimalist Dark) -->
+                <div class="relative w-full aspect-[1.75/1] bg-[#1C1917] rounded-2xl p-8 shadow-xl flex flex-col justify-between border border-stone-800 text-mora-sand select-none group hover:scale-[1.01] transition-transform">
+                    <div class="absolute top-3 right-4 text-[9px] uppercase tracking-widest text-stone-600 font-mono">Front</div>
+                    
+                    <div class="my-auto text-center space-y-1">
+                        <div class="serif-title text-4xl tracking-[0.25em] font-normal">MORA</div>
+                        <div class="text-[9px] uppercase tracking-[0.4em] text-[#B87D59]">Specialty Coffee House</div>
+                    </div>
+
+                    <div class="flex justify-between items-end text-[10px] text-stone-400 tracking-wider">
+                        <span>EST. 2026</span>
+                        <span>PARIS • TOKYO</span>
+                    </div>
+                </div>
+
+                <!-- Back of Card (Warm Sand) -->
+                <div class="relative w-full aspect-[1.75/1] bg-[#F4EFEA] rounded-2xl p-8 shadow-xl flex flex-col justify-between border border-stone-300 text-stone-900 select-none group hover:scale-[1.01] transition-transform">
+                    <div class="absolute top-3 right-4 text-[9px] uppercase tracking-widest text-stone-400 font-mono">Back</div>
+                    
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <div class="serif-title text-lg font-semibold tracking-wide">Elena Vance</div>
+                            <div class="text-[11px] text-[#9E5B3B] font-medium tracking-wide">Founder & Head Roaster</div>
+                        </div>
+                        <div class="w-8 h-8 rounded-full bg-[#1C1917] text-mora-sand flex items-center justify-center text-xs serif-title font-bold">
+                            M
+                        </div>
+                    </div>
+
+                    <div class="space-y-1 text-xs text-stone-700 font-light pt-2 border-t border-stone-300/70">
+                        <div class="flex items-center gap-2">
+                            <i class="fa-solid fa-envelope text-[10px] text-[#9E5B3B]"></i> elena@moracoffee.com
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fa-solid fa-phone text-[10px] text-[#9E5B3B]"></i> +33 1 42 68 55 00
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fa-solid fa-location-dot text-[10px] text-[#9E5B3B]"></i> 14 Rue de Bretagne, Paris
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- ================= SECTION 3: COFFEE CUP & PACKAGING DESIGN ================= -->
+        <section class="w-full bg-[#1C1917] text-mora-sand rounded-3xl brand-shadow p-8 md:p-14 relative overflow-hidden">
+            <div class="absolute -bottom-20 -left-20 w-96 h-96 bg-[#B87D59]/10 rounded-full blur-3xl pointer-events-none"></div>
+
+            <div class="flex justify-between items-start mb-10 border-b border-stone-800 pb-4">
+                <div>
+                    <span class="text-[11px] uppercase tracking-[0.3em] text-[#B87D59] font-semibold block mb-1">03 / Packaging Design</span>
+                    <h2 class="serif-title text-3xl md:text-4xl font-normal text-white">Kraft Coffee Cup & Retail Bag</h2>
+                </div>
+                <div class="text-xs font-mono text-stone-500 uppercase tracking-widest hidden sm:block">
+                    Sustainable Takeaway & Retail
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+                
+                <!-- Takeaway Cup Mockup -->
+                <div class="bg-[#12100E] rounded-2xl p-8 border border-stone-800 flex flex-col items-center justify-center min-h-[360px] relative">
+                    <div class="absolute top-4 left-4 text-[10px] uppercase tracking-widest text-stone-500 font-mono">Takeaway Paper Cup</div>
+                    
+                    <!-- Illustrated Coffee Cup SVG -->
+                    <div class="animate-float my-6">
+                        <svg width="180" height="240" viewBox="0 0 180 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Lid -->
+                            <path d="M50 30C50 25 55 22 65 22H115C125 22 130 25 130 30V38H50V30Z" fill="#3D3835"/>
+                            <path d="M70 18H110V22H70V18Z" fill="#524C48"/>
+                            
+                            <!-- Cup Body (Kraft Brown Tone) -->
+                            <path d="M50 42H130L118 215C118 220 114 224 109 224H71C66 224 62 220 62 215L50 42Z" fill="url(#kraftGradient)" stroke="#8C6246" stroke-width="1.5"/>
+                            
+                            <!-- Sleeve / Center Band -->
+                            <path d="M53 90H127V175H53V90Z" fill="#F4EFEA" stroke="#E0D5CC" stroke-width="0.5"/>
+                            
+                            <!-- Sleeve Label Branding -->
+                            <text x="90" y="118" font-family="serif" font-size="20" letter-spacing="4" fill="#1C1917" text-anchor="middle" font-weight="bold">MORA</text>
+                            <text x="90" y="138" font-family="sans-serif" font-size="6" letter-spacing="2" fill="#9E5B3B" text-anchor="middle">SINGLE ORIGIN ESPRESSO</text>
+                            <line x1="70" y1="148" x2="110" y2="148" stroke="#D8CEC3" stroke-width="0.5"/>
+                            <text x="90" y="160" font-family="sans-serif" font-size="5.5" letter-spacing="1" fill="#78716C" text-anchor="middle">NOTES: JASMINE • BERGAMOT</text>
+
+                            <!-- Gradient Definition -->
+                            <defs>
+                                <linearGradient id="kraftGradient" x1="50" y1="42" x2="130" y2="224" gradientUnits="userSpaceOnUse">
+                                    <stop offset="0%" stop-color="#C29B7A"/>
+                                    <stop offset="50%" stop-color="#B0835F"/>
+                                    <stop offset="100%" stop-color="#916645"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+
+                    <div class="text-xs text-stone-400 font-light tracking-wide text-center">
+                        Double-walled compostable kraft with tactile debossed sleeve.
+                    </div>
+                </div>
+
+                <!-- Retail Bean Pouch Mockup -->
+                <div class="bg-[#12100E] rounded-2xl p-8 border border-stone-800 flex flex-col justify-center min-h-[360px] relative space-y-4">
+                    <div class="absolute top-4 left-4 text-[10px] uppercase tracking-widest text-stone-500 font-mono">250g Retail Bean Pouch</div>
+
+                    <!-- Pouch visual card -->
+                    <div class="bg-[#F4EFEA] text-stone-900 rounded-xl p-6 shadow-md border border-stone-700 max-w-xs mx-auto w-full space-y-4">
+                        <div class="flex justify-between items-center border-b border-stone-300 pb-2">
+                            <span class="text-[9px] uppercase tracking-widest font-mono text-stone-500">Ethiopia Yirgacheffe</span>
+                            <span class="text-[9px] font-bold text-[#9E5B3B]">LIGHT ROAST</span>
+                        </div>
+
+                        <div class="text-center py-3 space-y-1">
+                            <div class="serif-title text-3xl tracking-[0.2em] font-normal">MORA</div>
+                            <div class="text-[8px] uppercase tracking-[0.3em] text-stone-600">Whole Bean Specialty Coffee</div>
+                        </div>
+
+                        <div class="bg-white/70 rounded-lg p-3 text-[10px] space-y-1 text-stone-700 border border-stone-200">
+                            <div class="flex justify-between">
+                                <span class="font-medium">Process:</span> <span>Washed & Sun-Dried</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="font-medium">Elevation:</span> <span>2,100m</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="font-medium">Tasting Notes:</span> <span>Peach, Jasmine, Honey</span>
+                            </div>
+                        </div>
+
+                        <div class="text-center text-[9px] text-stone-500 uppercase tracking-widest pt-1">
+                            Net Wt. 8.8 oz (250g)
+                        </div>
+                    </div>
+
+                    <div class="text-xs text-stone-400 font-light tracking-wide text-center">
+                        Matte barrier pouch with resealable zip and degassing valve.
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- ================= SECTION 4: INSTAGRAM PROFILE & POST DESIGN ================= -->
+        <section class="w-full bg-[#F4EFEA] rounded-3xl brand-shadow p-8 md:p-14 relative overflow-hidden">
+            <div class="flex justify-between items-start mb-10 border-b border-stone-300/60 pb-4">
+                <div>
+                    <span class="text-[11px] uppercase tracking-[0.3em] text-[#9E5B3B] font-semibold block mb-1">04 / Digital Presence</span>
+                    <h2 class="serif-title text-3xl md:text-4xl font-normal text-[#1C1917]">Matching Instagram Feed & Post</h2>
+                </div>
+                <div class="text-xs font-mono text-stone-500 uppercase tracking-widest hidden sm:block">
+                    Social Campaign Mockup
+                </div>
+            </div>
+
+            <!-- Instagram Feed UI Frame -->
+            <div class="max-w-md mx-auto bg-white rounded-2xl shadow-xl border border-stone-200 overflow-hidden">
+                
+                <!-- Instagram Header -->
+                <div class="flex items-center justify-between px-4 py-3 border-b border-stone-100">
+                    <div class="flex items-center gap-3">
+                        <div class="w-9 h-9 rounded-full bg-gradient-to-tr from-[#B87D59] to-stone-400 p-0.5">
+                            <div class="w-full h-full bg-white rounded-full flex items-center justify-center font-serif font-bold text-xs text-[#1C1917]">
+                                M
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex items-center gap-1">
+                                <span class="text-xs font-semibold text-stone-900 tracking-tight">mora.coffee</span>
+                                <i class="fa-solid fa-circle-check text-[10px] text-blue-500"></i>
+                            </div>
+                            <span class="text-[10px] text-stone-400">Paris & Tokyo</span>
+                        </div>
+                    </div>
+                    <button aria-label="More options" class="text-stone-600 p-1">
+                        <i class="fa-solid fa-ellipsis text-sm"></i>
+                    </button>
+                </div>
+
+                <!-- Instagram 1:1 Square Post Visual -->
+                <div class="relative w-full aspect-square bg-[#1C1917] flex flex-col justify-between p-8 text-mora-sand select-none">
+                    <!-- Background ambient glow -->
+                    <div class="absolute inset-0 bg-gradient-to-br from-[#1C1917] via-[#2A2421] to-[#12100E] pointer-events-none"></div>
+                    <div class="absolute inset-6 border border-stone-800 rounded-lg pointer-events-none"></div>
+
+                    <div class="relative z-10 flex justify-between items-start">
+                        <span class="text-[10px] uppercase tracking-[0.3em] text-[#B87D59]">Seasonal Drop</span>
+                        <span class="serif-title tracking-widest text-sm font-bold">MORA</span>
+                    </div>
+
+                    <div class="relative z-10 text-center space-y-3 my-auto">
+                        <h3 class="serif-title text-3xl md:text-4xl font-light tracking-wide">
+                            The Art of Slow Brewing.
+                        </h3>
+                        <p class="text-xs text-stone-400 font-light max-w-xs mx-auto">
+                            Experience clean sweetness and delicate floral notes in our new single-origin harvest.
+                        </p>
+                    </div>
+
+                    <div class="relative z-10 text-center">
+                        <span class="inline-block px-5 py-2 rounded-full bg-white text-black text-[10px] font-semibold tracking-widest uppercase">
+                            Shop New Harvest →
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Instagram Actions & Caption -->
+                <div class="p-4 space-y-2 text-xs">
+                    <div class="flex justify-between items-center text-lg text-stone-800">
+                        <div class="flex gap-4">
+                            <button aria-label="Like post" class="hover:text-rose-500 transition-colors"><i class="fa-regular fa-heart"></i></button>
+                            <button aria-label="Comment on post" class="hover:text-stone-600 transition-colors"><i class="fa-regular fa-comment"></i></button>
+                            <button aria-label="Share post" class="hover:text-stone-600 transition-colors"><i class="fa-regular fa-paper-plane"></i></button>
+                        </div>
+                        <button aria-label="Save post" class="hover:text-stone-600 transition-colors"><i class="fa-regular fa-bookmark"></i></button>
+                    </div>
+
+                    <div class="font-semibold text-stone-900 pt-1">
+                        1,284 likes
+                    </div>
+
+                    <div class="text-stone-700 leading-relaxed">
+                        <span class="font-semibold text-stone-900 mr-2">mora.coffee</span> 
+                        Brewed with intention. Now available online and at our Paris café location. ✨ <span class="text-[#9E5B3B]">#MoraCoffee #SpecialtyCoffee #ParisCafes #CoffeeRoasters</span>
+                    </div>
+
+                    <div class="text-[10px] text-stone-400 uppercase tracking-wide pt-1">
+                        View all 34 comments • 3 hours ago
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Portfolio Footer -->
+    <footer class="w-full max-w-xl text-center mt-16 text-stone-500 text-xs space-y-1">
+        <p>Created for professional brand identity and packaging portfolio presentation.</p>
+        <p class="text-[10px] text-stone-600">MORA Coffee Roasters • All Rights Reserved © 2026.</p>
+    </footer>
+
+</body>
+</html>
