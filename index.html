@@ -1,307 +1,611 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>ÜLKA | Creative Portfolio</title>
+<title>ÜLKA — Creative Portfolio</title>
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            scroll-behavior: smooth;
-        }
+<meta name="description" content="ÜLKA — Graphic Design, Social Media, Digital Content and Web Design Portfolio.">
+<meta name="author" content="ÜLKA">
 
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background: #f8f7f4;
-            color: #222;
-            line-height: 1.6;
-        }
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
 
-        nav {
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            background: rgba(255,255,255,0.96);
-            padding: 20px 8%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px solid #ddd;
-        }
+<style>
+:root {
+    --bg: #f7f6f2;
+    --text: #111111;
+    --muted: #686868;
+    --line: #deddd8;
+    --card: #ffffff;
+    --dark: #111111;
+    --soft: #ecebe6;
+}
 
-        nav h2 {
-            font-size: 24px;
-            letter-spacing: 2px;
-        }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        nav a {
-            text-decoration: none;
-            color: #222;
-            margin-left: 25px;
-            font-size: 14px;
-        }
+html {
+    scroll-behavior: smooth;
+}
 
-        nav a:hover {
-            opacity: 0.5;
-        }
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: "DM Sans", sans-serif;
+    line-height: 1.6;
+}
 
-        section {
-            padding: 90px 8%;
-        }
+a {
+    color: inherit;
+    text-decoration: none;
+}
 
-        .hero {
-            min-height: 85vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
+.container {
+    width: min(1120px, 90%);
+    margin: auto;
+}
 
-        .hero h1 {
-            font-size: 64px;
-            max-width: 850px;
-            line-height: 1.1;
-            margin-bottom: 25px;
-        }
+/* NAVIGATION */
 
-        .hero p {
-            font-size: 20px;
-            color: #666;
-        }
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(15px);
+    background: rgba(247,246,242,0.88);
+    border-bottom: 1px solid rgba(0,0,0,0.07);
+}
 
-        h2 {
-            font-size: 38px;
-            margin-bottom: 35px;
-        }
+.nav-inner {
+    height: 76px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
-        .about p {
-            max-width: 800px;
-            color: #555;
-            font-size: 17px;
-        }
+.logo {
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
 
-        .services {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-        }
+.nav-links {
+    display: flex;
+    gap: 30px;
+    font-size: 14px;
+}
 
-        .service {
-            background: white;
-            padding: 35px;
-            border: 1px solid #ddd;
-            transition: 0.3s;
-        }
+.nav-links a {
+    position: relative;
+    color: #444;
+    transition: 0.3s;
+}
 
-        .service:hover {
-            transform: translateY(-5px);
-        }
+.nav-links a:hover {
+    color: #000;
+}
 
-        .service h3 {
-            margin-bottom: 10px;
-            font-size: 21px;
-        }
+/* HERO */
 
-        .service p {
-            color: #666;
-        }
+.hero {
+    min-height: 88vh;
+    display: flex;
+    align-items: center;
+    padding: 100px 0;
+}
 
-        .category {
-            margin-top: 55px;
-        }
+.hero-small {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--muted);
+    margin-bottom: 28px;
+}
 
-        .category-title {
-            font-size: 24px;
-            margin-bottom: 22px;
-        }
+.hero h1 {
+    max-width: 900px;
+    font-size: clamp(55px, 9vw, 125px);
+    line-height: 0.92;
+    letter-spacing: -6px;
+    font-weight: 600;
+}
 
-        .portfolio-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 25px;
-        }
+.hero h1 span {
+    font-family: "Playfair Display", serif;
+    font-style: italic;
+    font-weight: 500;
+}
 
-        .project {
-            background: white;
-            padding: 32px;
-            border: 1px solid #ddd;
-            transition: 0.3s;
-        }
+.hero-description {
+    max-width: 540px;
+    margin-top: 35px;
+    color: var(--muted);
+    font-size: 17px;
+}
 
-        .project:hover {
-            transform: translateY(-6px);
-        }
+.hero-buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 35px;
+    flex-wrap: wrap;
+}
 
-        .project h3 {
-            margin-bottom: 10px;
-            font-size: 21px;
-        }
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 22px;
+    border: 1px solid var(--dark);
+    font-size: 14px;
+    transition: 0.3s;
+}
 
-        .project p {
-            color: #666;
-            margin-bottom: 22px;
-        }
+.button.dark {
+    background: var(--dark);
+    color: white;
+}
 
-        .tag {
-            display: inline-block;
-            font-size: 12px;
-            color: #777;
-            margin-bottom: 18px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
+.button:hover {
+    transform: translateY(-3px);
+}
 
-        .project a {
-            display: inline-block;
-            text-decoration: none;
-            color: white;
-            background: #222;
-            padding: 11px 19px;
-            border-radius: 4px;
-            font-size: 14px;
-            transition: 0.3s;
-        }
+.button.dark:hover {
+    background: #333;
+}
 
-        .project a:hover {
-            opacity: 0.7;
-        }
+/* SECTION */
 
-        .contact p {
-            margin-bottom: 10px;
-            color: #555;
-        }
+section {
+    padding: 110px 0;
+}
 
-        footer {
-            text-align: center;
-            padding: 30px;
-            background: #222;
-            color: white;
-        }
+.section-label {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--muted);
+    margin-bottom: 18px;
+}
 
-        @media (max-width: 700px) {
+.section-title {
+    font-size: clamp(38px, 5vw, 65px);
+    line-height: 1;
+    letter-spacing: -3px;
+    margin-bottom: 55px;
+}
 
-            .hero h1 {
-                font-size: 42px;
-            }
+/* ABOUT */
 
-            .services,
-            .portfolio-grid {
-                grid-template-columns: 1fr;
-            }
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 80px;
+    border-top: 1px solid var(--line);
+    padding-top: 40px;
+}
 
-            nav {
-                padding: 15px 5%;
-            }
+.about-intro {
+    font-family: "Playfair Display", serif;
+    font-size: 32px;
+    line-height: 1.25;
+}
 
-            nav a {
-                margin-left: 10px;
-                font-size: 12px;
-            }
+.about-text {
+    color: var(--muted);
+    font-size: 16px;
+}
 
-            section {
-                padding: 70px 6%;
-            }
-        }
-    </style>
+.about-text p + p {
+    margin-top: 20px;
+}
+
+/* SERVICES */
+
+.services {
+    border-top: 1px solid var(--line);
+}
+
+.service {
+    display: grid;
+    grid-template-columns: 80px 1fr auto;
+    align-items: center;
+    gap: 30px;
+    padding: 27px 0;
+    border-bottom: 1px solid var(--line);
+    transition: 0.3s;
+}
+
+.service:hover {
+    padding-left: 12px;
+}
+
+.service-number {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.service h3 {
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.service p {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.service-arrow {
+    font-size: 25px;
+}
+
+/* PORTFOLIO */
+
+.portfolio-section {
+    background: #111;
+    color: white;
+}
+
+.portfolio-section .section-label {
+    color: #999;
+}
+
+.portfolio-section .section-title {
+    color: white;
+}
+
+.category {
+    margin-bottom: 75px;
+}
+
+.category-title {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #999;
+    margin-bottom: 22px;
+}
+
+.category-title::after {
+    content: "";
+    height: 1px;
+    background: #333;
+    flex: 1;
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+}
+
+.project {
+    background: #191919;
+    border: 1px solid #292929;
+    padding: 32px;
+    min-height: 230px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: 0.35s;
+}
+
+.project:hover {
+    transform: translateY(-6px);
+    background: #202020;
+    border-color: #555;
+}
+
+.project-number {
+    color: #777;
+    font-size: 12px;
+}
+
+.project h3 {
+    font-size: 28px;
+    font-weight: 500;
+    margin: 35px 0 10px;
+}
+
+.project p {
+    color: #999;
+    font-size: 14px;
+}
+
+.project-link {
+    display: inline-block;
+    margin-top: 25px;
+    font-size: 13px;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
+
+/* SKILLS */
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 35px;
+}
+
+.skill {
+    border: 1px solid var(--line);
+    padding: 10px 16px;
+    font-size: 13px;
+}
+
+/* CONTACT */
+
+.contact {
+    text-align: center;
+    padding: 140px 0;
+}
+
+.contact h2 {
+    font-size: clamp(45px, 7vw, 85px);
+    line-height: 0.95;
+    letter-spacing: -4px;
+}
+
+.contact h2 span {
+    font-family: "Playfair Display", serif;
+    font-style: italic;
+}
+
+.contact p {
+    color: var(--muted);
+    margin: 28px auto;
+    max-width: 500px;
+}
+
+/* FOOTER */
+
+footer {
+    border-top: 1px solid var(--line);
+    padding: 25px 0;
+    font-size: 12px;
+    color: var(--muted);
+    display: flex;
+    justify-content: space-between;
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .nav-inner {
+        height: 65px;
+    }
+
+    .nav-links {
+        gap: 13px;
+        font-size: 12px;
+    }
+
+    .hero {
+        min-height: 78vh;
+        padding: 70px 0;
+    }
+
+    .hero h1 {
+        letter-spacing: -3px;
+    }
+
+    section {
+        padding: 80px 0;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .about-intro {
+        font-size: 27px;
+    }
+
+    .service {
+        grid-template-columns: 45px 1fr;
+        gap: 15px;
+    }
+
+    .service-arrow {
+        display: none;
+    }
+
+    .projects {
+        grid-template-columns: 1fr;
+    }
+
+    .project {
+        min-height: 210px;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 8px;
+    }
+}
+</style>
 </head>
 
 <body>
 
-    <nav>
-        <h2>ÜLKA.</h2>
+<!-- NAVIGATION -->
 
-        <div>
+<nav>
+    <div class="container nav-inner">
+        <a href="#top" class="logo">ÜLKA</a>
+
+        <div class="nav-links">
             <a href="#about">About</a>
             <a href="#services">Services</a>
-            <a href="#portfolio">Portfolio</a>
+            <a href="#work">Work</a>
             <a href="#contact">Contact</a>
         </div>
-    </nav>
+    </div>
+</nav>
 
 
-    <!-- HERO -->
+<!-- HERO -->
 
-    <section class="hero">
+<header class="hero" id="top">
+    <div class="container">
 
-        <h1>Make your ideas visible.</h1>
+        <div class="hero-small">
+            Creative Portfolio — 2026
+        </div>
 
-        <p>
-            Graphic Design • Social Media • Digital Content • Web Design
+        <h1>
+            Make your<br>
+            ideas <span>visible.</span>
+        </h1>
+
+        <p class="hero-description">
+            Graphic design, social media, digital content and web design
+            for brands, creators and people who want their ideas to stand out.
         </p>
 
-    </section>
+        <div class="hero-buttons">
+            <a href="#work" class="button dark">View my work ↗</a>
+            <a href="#contact" class="button">Let's work together</a>
+        </div>
+
+    </div>
+</header>
 
 
-    <!-- ABOUT -->
+<!-- ABOUT -->
 
-    <section id="about" class="about">
+<section id="about">
+    <div class="container">
 
-        <h2>About Me</h2>
+        <div class="section-label">01 — About</div>
 
-        <p>
-            I am a creative and motivated International Relations student
-            interested in graphic design, social media content, digital
-            creativity and web design. I enjoy creating modern visual
-            concepts and exploring new digital tools, including AI-assisted
-            creative workflows.
-        </p>
+        <h2 class="section-title">
+            Creative work with<br>
+            a digital mindset.
+        </h2>
 
-    </section>
+        <div class="about-grid">
+
+            <div class="about-intro">
+                I turn ideas into clean,
+                engaging and modern
+                digital experiences.
+            </div>
+
+            <div class="about-text">
+                <p>
+                    I'm ÜLKA, a creative designer focused on graphic design,
+                    social media content, digital branding and web design.
+                </p>
+
+                <p>
+                    I enjoy creating visually strong concepts that feel
+                    modern, simple and memorable. My work combines
+                    creativity with AI-assisted tools and digital trends.
+                </p>
+
+                <div class="skills">
+                    <span class="skill">Graphic Design</span>
+                    <span class="skill">Social Media</span>
+                    <span class="skill">Content Creation</span>
+                    <span class="skill">AI-Assisted Design</span>
+                    <span class="skill">Web Design</span>
+                    <span class="skill">Canva</span>
+                    <span class="skill">HTML / CSS</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
 
 
-    <!-- SERVICES -->
+<!-- SERVICES -->
 
-    <section id="services">
+<section id="services">
+    <div class="container">
 
-        <h2>Services</h2>
+        <div class="section-label">02 — Services</div>
+
+        <h2 class="section-title">
+            What I can<br>
+            create for you.
+        </h2>
 
         <div class="services">
 
             <div class="service">
-                <h3>🎨 Graphic Design</h3>
-                <p>
-                    Modern and clean visual designs for brands,
-                    campaigns and digital platforms.
-                </p>
+                <div class="service-number">01</div>
+
+                <div>
+                    <h3>Graphic Design</h3>
+                    <p>Social media visuals, brand concepts and digital graphics.</p>
+                </div>
+
+                <div class="service-arrow">↗</div>
             </div>
 
             <div class="service">
-                <h3>📱 Social Media</h3>
-                <p>
-                    Creative content concepts for Instagram,
-                    TikTok and other social media platforms.
-                </p>
+                <div class="service-number">02</div>
+
+                <div>
+                    <h3>Social Media</h3>
+                    <p>Creative posts, short-form content and visual campaigns.</p>
+                </div>
+
+                <div class="service-arrow">↗</div>
             </div>
 
             <div class="service">
-                <h3>📄 CV Design</h3>
-                <p>
-                    Professional and visually appealing CV designs
-                    for students and job seekers.
-                </p>
+                <div class="service-number">03</div>
+
+                <div>
+                    <h3>CV Design</h3>
+                    <p>Modern, clean and professional CV layouts.</p>
+                </div>
+
+                <div class="service-arrow">↗</div>
             </div>
 
             <div class="service">
-                <h3>💻 Web Design</h3>
-                <p>
-                    Simple, modern and responsive websites using
-                    HTML and CSS.
-                </p>
+                <div class="service-number">04</div>
+
+                <div>
+                    <h3>Web Design</h3>
+                    <p>Simple, responsive and modern portfolio websites.</p>
+                </div>
+
+                <div class="service-arrow">↗</div>
             </div>
 
         </div>
+    </div>
+</section>
 
-    </section>
 
+<!-- PORTFOLIO -->
 
-    <!-- PORTFOLIO -->
+<section class="portfolio-section" id="work">
+    <div class="container">
 
-    <section id="portfolio">
+        <div class="section-label">03 — Selected Work</div>
 
-        <h2>Portfolio</h2>
+        <h2 class="section-title">
+            A few things<br>
+            I've created.
+        </h2>
 
 
         <!-- SOCIAL MEDIA -->
@@ -312,85 +616,80 @@
                 🎬 Social Media
             </div>
 
-            <div class="portfolio-grid">
+            <div class="projects">
 
                 <div class="project">
+                    <div class="project-number">EDIT #01</div>
 
-                    <span class="tag">Personal Project</span>
+                    <div>
+                        <h3>Daha 17</h3>
+                        <p>Personal TikTok edit project.</p>
 
-                    <h3>Daha 17 — Edit #01</h3>
-
-                    <p>
-                        Short-form video edit created for my personal
-                        TikTok edit account.
-                    </p>
-
-                    <a href="https://vt.tiktok.com/ZSqUEnqWX/" target="_blank">
-                        View on TikTok →
-                    </a>
-
+                        <a
+                        href="https://vt.tiktok.com/ZSqUEnqWX/"
+                        target="_blank"
+                        class="project-link">
+                        Watch project ↗
+                        </a>
+                    </div>
                 </div>
 
 
                 <div class="project">
+                    <div class="project-number">EDIT #02</div>
 
-                    <span class="tag">Personal Project</span>
+                    <div>
+                        <h3>Daha 17</h3>
+                        <p>Personal TikTok edit project.</p>
 
-                    <h3>Daha 17 — Edit #02</h3>
-
-                    <p>
-                        Short-form video edit created for my personal
-                        TikTok edit account.
-                    </p>
-
-                    <a href="https://vt.tiktok.com/ZSqUEqKph/" target="_blank">
-                        View on TikTok →
-                    </a>
-
+                        <a
+                        href="https://vt.tiktok.com/ZSqUEqKph/"
+                        target="_blank"
+                        class="project-link">
+                        Watch project ↗
+                        </a>
+                    </div>
                 </div>
 
 
                 <div class="project">
+                    <div class="project-number">EDIT #03</div>
 
-                    <span class="tag">Personal Project</span>
+                    <div>
+                        <h3>Daha 17</h3>
+                        <p>Personal TikTok edit project.</p>
 
-                    <h3>Daha 17 — Edit #03</h3>
-
-                    <p>
-                        Short-form video edit created for my personal
-                        TikTok edit account.
-                    </p>
-
-                    <a href="https://vt.tiktok.com/ZSqUEtdQa/" target="_blank">
-                        View on TikTok →
-                    </a>
-
+                        <a
+                        href="https://vt.tiktok.com/ZSqUEtdQa/"
+                        target="_blank"
+                        class="project-link">
+                        Watch project ↗
+                        </a>
+                    </div>
                 </div>
 
 
                 <div class="project">
+                    <div class="project-number">EDIT #04</div>
 
-                    <span class="tag">Personal Project</span>
+                    <div>
+                        <h3>Daha 17</h3>
+                        <p>Personal TikTok edit project.</p>
 
-                    <h3>Daha 17 — Edit #04</h3>
-
-                    <p>
-                        Short-form video edit created for my personal
-                        TikTok edit account.
-                    </p>
-
-                    <a href="https://vt.tiktok.com/ZSqUEcQ4W/" target="_blank">
-                        View on TikTok →
-                    </a>
-
+                        <a
+                        href="https://vt.tiktok.com/ZSqUEcQ4W/"
+                        target="_blank"
+                        class="project-link">
+                        Watch project ↗
+                        </a>
+                    </div>
                 </div>
 
             </div>
-
         </div>
 
 
-        <!-- AI ASSISTED CONTENT -->
+        <!-- AI CONTENT -->
 
         <div class="category">
 
@@ -398,47 +697,46 @@
                 🤖 AI-Assisted Content
             </div>
 
-            <div class="portfolio-grid">
-
+            <div class="projects">
 
                 <div class="project">
+                    <div class="project-number">PROJECT 05</div>
 
-                    <span class="tag">AI-Assisted Concept</span>
+                    <div>
+                        <h3>LUMÉA</h3>
+                        <p>
+                            Fictional beauty brand social media campaign.
+                            AI-assisted concept.
+                        </p>
 
-                    <h3>LUMÉA — Instagram Campaign</h3>
-
-                    <p>
-                        A fictional modern beauty brand campaign
-                        designed for Instagram. Creative concept
-                        developed with AI-assisted tools.
-                    </p>
-
-                    <a href="lumea.html" target="_blank">
-                        View Project →
-                    </a>
-
+                        <a
+                        href="lumea.html"
+                        class="project-link">
+                        View project ↗
+                        </a>
+                    </div>
                 </div>
 
 
                 <div class="project">
+                    <div class="project-number">PROJECT 06</div>
 
-                    <span class="tag">AI-Assisted Concept</span>
+                    <div>
+                        <h3>NOIRÉ</h3>
+                        <p>
+                            Fictional fashion brand TikTok / Reels campaign.
+                            AI-assisted concept.
+                        </p>
 
-                    <h3>NOIRÉ — TikTok Campaign</h3>
-
-                    <p>
-                        A fictional fashion brand TikTok/Reels campaign
-                        concept focused on a modern night aesthetic.
-                    </p>
-
-                    <a href="noire.html" target="_blank">
-                        View Project →
-                    </a>
-
+                        <a
+                        href="noire.html"
+                        class="project-link">
+                        View project ↗
+                        </a>
+                    </div>
                 </div>
 
             </div>
-
         </div>
 
 
@@ -450,28 +748,27 @@
                 🎨 Graphic Design
             </div>
 
-            <div class="portfolio-grid">
+            <div class="projects">
 
                 <div class="project">
+                    <div class="project-number">PROJECT 07</div>
 
-                    <span class="tag">AI-Assisted Brand Identity</span>
+                    <div>
+                        <h3>MORA</h3>
+                        <p>
+                            Fictional coffee brand identity concept
+                            including logo, packaging and social media.
+                        </p>
 
-                    <h3>MORA — Coffee Brand Identity</h3>
-
-                    <p>
-                        A fictional modern coffee brand identity concept
-                        including logo, business card, packaging and
-                        social media visuals.
-                    </p>
-
-                    <a href="mora.html" target="_blank">
-                        View Project →
-                    </a>
-
+                        <a
+                        href="mora.html"
+                        class="project-link">
+                        View project ↗
+                        </a>
+                    </div>
                 </div>
 
             </div>
-
         </div>
 
 
@@ -483,54 +780,78 @@
                 💻 Web Design
             </div>
 
-            <div class="portfolio-grid">
+            <div class="projects">
 
                 <div class="project">
+                    <div class="project-number">PROJECT 08</div>
 
-                    <span class="tag">Personal Project</span>
+                    <div>
+                        <h3>ÜLKA Portfolio</h3>
+                        <p>
+                            Personal portfolio website designed and built
+                            with HTML and CSS.
+                        </p>
 
-                    <h3>ÜLKA — Personal Portfolio Website</h3>
-
-                    <p>
-                        A responsive personal portfolio website created
-                        with HTML and CSS and published using GitHub Pages.
-                    </p>
-
-                    <a href="https://ulkerrguliyeva-star.github.io/ulkerscreate/" target="_blank">
-                        View Website →
-                    </a>
-
+                        <a
+                        href="#top"
+                        class="project-link">
+                        You're here ↗
+                        </a>
+                    </div>
                 </div>
 
             </div>
-
         </div>
 
-    </section>
+    </div>
+</section>
 
 
-    <!-- CONTACT -->
+<!-- CONTACT -->
 
-    <section id="contact" class="contact">
+<section class="contact" id="contact">
 
-        <h2>Contact</h2>
+    <div class="container">
+
+        <div class="section-label">
+            04 — Contact
+        </div>
+
+        <h2>
+            Have an idea?<br>
+            Let's make it <span>real.</span>
+        </h2>
 
         <p>
-            Available for freelance projects and creative opportunities.
+            I'm available for freelance projects, creative collaborations
+            and remote opportunities.
         </p>
 
-        <p>
-            Email: ulkerrguliyeva@gmail.com
-        </p>
+        <a
+        href="mailto:ulkerrguliyeva@email.com"
+        class="button dark">
+        Get in touch ↗
+        </a>
 
-    </section>
+    </div>
+
+</section>
 
 
+<!-- FOOTER -->
+
+<div class="container">
     <footer>
 
-        © 2026 ÜLKA. All rights reserved.
+        <span>© 2026 ÜLKA</span>
+
+        <span>
+            Graphic Design • Social Media • Web Design
+        </span>
 
     </footer>
+</div>
+
 
 </body>
 </html>
