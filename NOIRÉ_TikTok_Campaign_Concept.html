@@ -1,322 +1,756 @@
 <!DOCTYPE html>
-<html lang="en" class="h-full">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NOIRÉ - TikTok & Reels Campaign</title>
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <title>Ülka Creative | Portfolio</title>
+
     <style>
-        .font-editorial { font-family: 'Cinzel', serif; }
-        .font-sans-custom { font-family: 'Plus Jakarta Sans', sans-serif; }
-        @keyframes pulseGlow {
-            0%, 100% { opacity: 0.4; transform: scale(1); }
-            50% { opacity: 0.7; transform: scale(1.05); }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-        .animate-glow { animation: pulseGlow 6s infinite ease-in-out; }
-        @keyframes marquee {
-            0% { transform: translateX(0%); }
-            100% { transform: translateX(-50%); }
+
+        html {
+            scroll-behavior: smooth;
         }
-        .animate-marquee { animation: marquee 10s linear infinite; }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #faf9fc;
+            color: #222;
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 22px 8%;
+            background: rgba(255,255,255,0.9);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #eee;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: 800;
+            letter-spacing: 2px;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-size: 15px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #7c3aed;
+        }
+
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 50px 20px;
+
+            background:
+                radial-gradient(circle at top left, #eee7ff, transparent 40%),
+                radial-gradient(circle at bottom right, #f3e8ff, transparent 40%);
+        }
+
+        .hero h1 {
+            font-size: clamp(45px, 8vw, 80px);
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            color: #7c3aed;
+        }
+
+        .hero p {
+            font-size: 20px;
+            color: #666;
+            margin-bottom: 35px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 14px 30px;
+            background: #7c3aed;
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            transition: 0.3s;
+        }
+
+        .button:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px rgba(124,58,237,0.25);
+        }
+
+        section {
+            padding: 100px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 40px;
+            margin-bottom: 55px;
+        }
+
+        .about {
+            max-width: 750px;
+            margin: auto;
+            text-align: center;
+            font-size: 18px;
+            line-height: 1.9;
+            color: #666;
+        }
+
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 25px;
+        }
+
+        .service {
+            background: white;
+            padding: 35px 25px;
+            border-radius: 20px;
+            text-align: center;
+            border: 1px solid #eee;
+            transition: 0.3s;
+        }
+
+        .service:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+        }
+
+        .service-icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .service h3 {
+            margin-bottom: 10px;
+        }
+
+        .service p {
+            color: #777;
+            line-height: 1.6;
+        }
+
+        .portfolio-category {
+            margin-bottom: 70px;
+        }
+
+        .category-title {
+            font-size: 26px;
+            margin-bottom: 25px;
+        }
+
+        .portfolio {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .project {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            border: 1px solid #eee;
+            min-height: 220px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            transition: 0.3s;
+        }
+
+        .project:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+        }
+
+        .project-icon {
+            font-size: 38px;
+            margin-bottom: 20px;
+        }
+
+        .project h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .project p {
+            color: #777;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .project-link {
+            display: inline-block;
+            color: #7c3aed;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .project-link:hover {
+            transform: translateX(5px);
+        }
+
+        .contact {
+            text-align: center;
+            background: #f1edff;
+        }
+
+        .contact p {
+            color: #666;
+            margin-bottom: 25px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: white;
+            color: #888;
+            font-size: 14px;
+        }
+
+        @media (max-width: 650px) {
+
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav ul {
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            section {
+                padding: 70px 6%;
+            }
+
+            .section-title {
+                font-size: 32px;
+            }
+
+            .hero h1 {
+                font-size: 48px;
+            }
+
+        }
+
     </style>
+
 </head>
-<body class="h-full bg-zinc-950 text-white font-sans-custom flex items-center justify-center overflow-hidden selection:bg-zinc-800">
 
-    <!-- Ambient background glow -->
-    <div class="absolute inset-0 overflow-hidden pointer-events-none">
-        <div class="absolute -top-40 -left-40 w-96 h-96 bg-zinc-800/30 rounded-full blur-3xl animate-glow"></div>
-        <div class="absolute -bottom-40 -right-40 w-96 h-96 bg-zinc-900/40 rounded-full blur-3xl animate-glow" style="animation-delay: 3s;"></div>
-    </div>
+<body>
 
-    <!-- Main Container simulating 9:16 Vertical Video Screen -->
-    <div class="relative w-full max-w-[420px] h-[100dvh] sm:h-[840px] sm:rounded-[3rem] sm:border-8 sm:border-zinc-900 bg-black shadow-2xl overflow-hidden flex flex-col justify-between select-none">
-        
-        <!-- Video Background Layer (Simulated Cinematic Editorial Footage) -->
-        <div id="videoContainer" class="absolute inset-0 bg-zinc-950 overflow-hidden cursor-pointer" onclick="togglePlayState()">
-            <!-- Atmospheric Gradient & High Fashion SVG Silhouette Mockup -->
-            <div class="absolute inset-0 bg-gradient-to-t from-black via-zinc-950/40 to-black/60 z-10"></div>
-            
-            <!-- Dynamic Editorial Visual / CSS & SVG Fashion Art Piece -->
-            <div class="absolute inset-0 flex items-center justify-center z-0 opacity-85 scale-105 transition-transform duration-1000" id="editorialVisual">
-                <svg viewBox="0 0 400 700" class="w-full h-full object-cover filter contrast-125 brightness-90">
-                    <defs>
-                        <linearGradient id="silk" x1="0%" y1="0%" x2="100%" y2="100%">
-                            <stop offset="0%" stop-color="#18181b"/>
-                            <stop offset="50%" stop-color="#09090b"/>
-                            <stop offset="100%" stop-color="#27272a"/>
-                        </linearGradient>
-                        <radialGradient id="spotlight" cx="50%=" cy="35%" r="60%">
-                            <stop offset="0%" stop-color="#ffffff" stop-opacity="0.12"/>
-                            <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
-                        </radialGradient>
-                    </defs>
-                    <rect width="400" height="700" fill="url(#spotlight)"/>
-                    <!-- Elegant Abstract Fashion Silhouette -->
-                    <path d="M160,180 C180,175 220,175 240,180 C250,220 270,300 280,380 C290,460 310,580 320,680 L80,680 C90,580 110,460 120,380 C130,300 150,220 160,180 Z" fill="url(#silk)" stroke="#3f3f46" stroke-width="1"/>
-                    <!-- Subtle Metallic Highlights -->
-                    <path d="M195,190 C198,300 200,450 202,680" stroke="#71717a" stroke-width="0.8" stroke-dasharray="4,8" opacity="0.6"/>
-                    <ellipse cx="200" cy="155" rx="22" ry="26" fill="#18181b" stroke="#52525b" stroke-width="1"/>
-                </svg>
-            </div>
+    <nav>
 
-            <!-- Play State Indicator Overlay -->
-            <div id="playStateOverlay" class="absolute inset-0 flex items-center justify-center z-20 pointer-events-none opacity-0 transition-opacity duration-300">
-                <div class="w-20 h-20 rounded-full bg-black/50 backdrop-blur-md flex items-center justify-center border border-white/10">
-                    <i data-lucide="play" class="w-8 h-8 text-white fill-white ml-1"></i>
-                </div>
-            </div>
+        <div class="logo">
+            ÜLKA.
         </div>
 
-        <!-- Top Header Controls (TikTok / Reels Style) -->
-        <div class="relative z-30 pt-6 px-5 flex items-center justify-between pointer-events-auto">
-            <div class="flex items-center space-x-3 bg-black/30 backdrop-blur-md px-3 py-1.5 rounded-full border border-white/10">
-                <span class="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span>
-                <span class="text-xs font-semibold tracking-widest text-zinc-300 font-editorial">NOIRÉ LIVE</span>
-            </div>
-            <div class="flex items-center space-x-3">
-                <button onclick="toggleAudio()" id="audioBtn" class="w-9 h-9 rounded-full bg-black/30 backdrop-blur-md border border-white/10 flex items-center justify-center text-zinc-300 hover:text-white transition">
-                    <i data-lucide="volume-2" class="w-4 h-4"></i>
-                </button>
-                <button onclick="openShareModal()" class="w-9 h-9 rounded-full bg-black/30 backdrop-blur-md border border-white/10 flex items-center justify-center text-zinc-300 hover:text-white transition">
-                    <i data-lucide="share-2" class="w-4 h-4"></i>
-                </button>
-            </div>
+        <ul>
+
+            <li>
+                <a href="#about">About</a>
+            </li>
+
+            <li>
+                <a href="#services">Services</a>
+            </li>
+
+            <li>
+                <a href="#portfolio">Portfolio</a>
+            </li>
+
+            <li>
+                <a href="#contact">Contact</a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+    <section class="hero">
+
+        <div>
+
+            <h1>
+                Make your<br>
+                <span>ideas visible.</span>
+            </h1>
+
+            <p>
+                Graphic Design • Social Media • Digital Content
+            </p>
+
+            <a href="#portfolio" class="button">
+                View My Work
+            </a>
+
         </div>
 
-        <!-- Right Side Engagement Bar -->
-        <div class="absolute right-4 bottom-32 z-30 flex flex-col items-center space-y-5">
-            <!-- Brand Avatar -->
-            <div class="relative mb-1">
-                <div class="w-12 h-12 rounded-full border border-white/30 p-0.5 bg-black/50 backdrop-blur-sm flex items-center justify-center font-editorial font-bold text-sm tracking-tighter">
-                    N<span class="text-xs">R</span>
-                </div>
-                <button class="absolute -bottom-2 left-1/2 -translate-x-1/2 w-5 h-5 bg-white text-black rounded-full flex items-center justify-center text-xs font-bold shadow-lg hover:bg-zinc-200 transition">
-                    +
-                </button>
-            </div>
+    </section>
 
-            <!-- Like Button -->
-            <button onclick="toggleLike(this)" class="group flex flex-col items-center">
-                <div class="w-11 h-11 rounded-full bg-black/40 backdrop-blur-md border border-white/10 flex items-center justify-center text-white group-hover:bg-white/20 transition">
-                    <i data-lucide="heart" class="w-5 h-5 transition-transform group-active:scale-125"></i>
-                </div>
-                <span class="text-[11px] font-medium mt-1 text-zinc-300">48.2K</span>
-            </button>
 
-            <!-- Comment Button -->
-            <button onclick="openComments()" class="group flex flex-col items-center">
-                <div class="w-11 h-11 rounded-full bg-black/40 backdrop-blur-md border border-white/10 flex items-center justify-center text-white group-hover:bg-white/20 transition">
-                    <i data-lucide="message-circle" class="w-5 h-5"></i>
-                </div>
-                <span class="text-[11px] font-medium mt-1 text-zinc-300">1,240</span>
-            </button>
+    <section id="about">
 
-            <!-- Bookmark Button -->
-            <button onclick="toggleBookmark(this)" class="group flex flex-col items-center">
-                <div class="w-11 h-11 rounded-full bg-black/40 backdrop-blur-md border border-white/10 flex items-center justify-center text-white group-hover:bg-white/20 transition">
-                    <i data-lucide="bookmark" class="w-5 h-5"></i>
-                </div>
-                <span class="text-[11px] font-medium mt-1 text-zinc-300">9,812</span>
-            </button>
+        <h2 class="section-title">
+            About Me
+        </h2>
 
-            <!-- Rotating Audio Vinyl -->
-            <div class="w-10 h-10 rounded-full bg-zinc-900 border-2 border-zinc-700 flex items-center justify-center shadow-xl animate-spin" style="animation-duration: 6s;">
-                <div class="w-3 h-3 rounded-full bg-white"></div>
-            </div>
+        <div class="about">
+
+            <p>
+                Hi! I'm Ülka.
+
+                I create digital content, graphic designs
+                and social media projects with a focus on
+                modern, clean and engaging visual communication.
+
+                I enjoy turning ideas into creative digital experiences.
+            </p>
+
         </div>
 
-        <!-- Bottom Content Overlay (Typography & CTA) -->
-        <div class="relative z-30 p-6 pb-8 flex flex-col justify-end space-y-4 pointer-events-none">
-            
-            <!-- Creator / Brand Info & Caption -->
-            <div class="pointer-events-auto">
-                <div class="flex items-center space-x-2 mb-1.5">
-                    <h3 class="font-editorial font-bold text-base tracking-widest text-white">NOIRÉ</h3>
-                    <span class="bg-white/20 backdrop-blur-sm text-[10px] uppercase px-1.5 py-0.5 rounded text-zinc-200">Official</span>
-                </div>
-                <p class="text-sm font-light text-zinc-200 leading-snug">
-                    <span class="font-medium text-white">OWN THE NIGHT.</span> New season. New attitude. Crafted in midnight silk & structured tailoring. #NoireFashion #Editorial #AuraEdit
+    </section>
+
+
+    <section id="services">
+
+        <h2 class="section-title">
+            Services
+        </h2>
+
+        <div class="services">
+
+            <div class="service">
+
+                <div class="service-icon">🎨</div>
+
+                <h3>
+                    Graphic Design
+                </h3>
+
+                <p>
+                    Social media visuals, digital graphics,
+                    promotional designs and creative concepts.
                 </p>
+
             </div>
 
-            <!-- Audio Marquee Tracker -->
-            <div class="flex items-center space-x-2 text-xs text-zinc-400 overflow-hidden whitespace-nowrap pointer-events-auto">
-                <i data-lucide="music" class="w-3.5 h-3.5 shrink-0 text-zinc-300"></i>
-                <div class="inline-block overflow-hidden relative w-48">
-                    <div class="inline-block animate-marquee">
-                        <span>ORIGINAL SOUND — NOIRÉ STUDIOS PARIS &nbsp;&bull;&nbsp; </span>
-                        <span>ORIGINAL SOUND — NOIRÉ STUDIOS PARIS &nbsp;&bull;&nbsp; </span>
-                    </div>
-                </div>
+
+            <div class="service">
+
+                <div class="service-icon">📱</div>
+
+                <h3>
+                    Social Media
+                </h3>
+
+                <p>
+                    Creative content concepts and short-form
+                    video edits for Instagram and TikTok.
+                </p>
+
             </div>
 
-            <!-- Primary Call to Action Button -->
-            <button onclick="openCollectionDrawer()" class="pointer-events-auto w-full py-3.5 px-6 bg-white hover:bg-zinc-200 text-black font-semibold rounded-xl text-sm tracking-wider uppercase transition-all duration-300 shadow-2xl flex items-center justify-center space-x-2 group">
-                <span>Explore the collection</span>
-                <i data-lucide="arrow-right" class="w-4 h-4 transition-transform group-hover:translate-x-1"></i>
-            </button>
+
+            <div class="service">
+
+                <div class="service-icon">📄</div>
+
+                <h3>
+                    CV Design
+                </h3>
+
+                <p>
+                    Clean and modern CV layouts designed
+                    to present information professionally.
+                </p>
+
+            </div>
+
+
+            <div class="service">
+
+                <div class="service-icon">💻</div>
+
+                <h3>
+                    Web Design
+                </h3>
+
+                <p>
+                    Simple, modern and responsive websites
+                    created with HTML and CSS.
+                </p>
+
+            </div>
+
         </div>
 
-        <!-- Progress Bar (Video Bottom Line) -->
-        <div class="absolute bottom-0 left-0 right-0 h-1 bg-zinc-800 z-40">
-            <div id="progressBar" class="h-full bg-white w-full transition-all duration-300"></div>
+    </section>
+
+
+    <section id="portfolio">
+
+        <h2 class="section-title">
+            Portfolio
+        </h2>
+
+
+        <!-- SOCIAL MEDIA -->
+
+        <div class="portfolio-category">
+
+            <h3 class="category-title">
+                🎬 Social Media
+            </h3>
+
+            <div class="portfolio">
+
+
+                <div class="project">
+
+                    <div>
+
+                        <div class="project-icon">🎥</div>
+
+                        <h3>
+                            Daha 17 — Edit #01
+                        </h3>
+
+                        <p>
+                            Personal short-form video edit
+                            created for TikTok.
+                        </p>
+
+                    </div>
+
+                    <a
+                        href="https://vt.tiktok.com/ZSqUEnqWX/"
+                        target="_blank"
+                        class="project-link">
+
+                        View on TikTok →
+
+                    </a>
+
+                </div>
+
+
+                <div class="project">
+
+                    <div>
+
+                        <div class="project-icon">🎬</div>
+
+                        <h3>
+                            Daha 17 — Edit #02
+                        </h3>
+
+                        <p>
+                            Personal social media edit
+                            created for TikTok.
+                        </p>
+
+                    </div>
+
+                    <a
+                        href="https://vt.tiktok.com/ZSqUEqKph/"
+                        target="_blank"
+                        class="project-link">
+
+                        View on TikTok →
+
+                    </a>
+
+                </div>
+
+
+                <div class="project">
+
+                    <div>
+
+                        <div class="project-icon">🎞️</div>
+
+                        <h3>
+                            Daha 17 — Edit #03
+                        </h3>
+
+                        <p>
+                            Short-form video content created
+                            for a personal social media project.
+                        </p>
+
+                    </div>
+
+                    <a
+                        href="https://vt.tiktok.com/ZSqUEtdQa/"
+                        target="_blank"
+                        class="project-link">
+
+                        View on TikTok →
+
+                    </a>
+
+                </div>
+
+
+                <div class="project">
+
+                    <div>
+
+                        <div class="project-icon">📱</div>
+
+                        <h3>
+                            Daha 17 — Edit #04
+                        </h3>
+
+                        <p>
+                            TikTok edit focusing on visual
+                            storytelling and creative editing.
+                        </p>
+
+                    </div>
+
+                    <a
+                        href="https://vt.tiktok.com/ZSqUEcQ4W/"
+                        target="_blank"
+                        class="project-link">
+
+                        View on TikTok →
+
+                    </a>
+
+                </div>
+
+            </div>
+
         </div>
-    </div>
 
-    <!-- Collection Drawer Modal -->
-    <div id="collectionModal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md flex items-end justify-center opacity-0 pointer-events-none transition-opacity duration-300">
-        <div class="w-full max-w-[420px] bg-zinc-900 rounded-t-3xl p-6 border-t border-zinc-800 transform translate-y-full transition-transform duration-300 max-h-[85vh] overflow-y-auto" id="drawerContent">
-            <div class="flex items-center justify-between mb-6">
-                <div>
-                    <h4 class="font-editorial text-lg tracking-widest text-white">NOIRÉ ARCHIVE</h4>
-                    <p class="text-xs text-zinc-400">Fall / Winter 2026 Collection</p>
+
+        <!-- AI ASSISTED CONTENT -->
+
+        <div class="portfolio-category">
+
+            <h3 class="category-title">
+                🤖 AI-Assisted Content
+            </h3>
+
+            <div class="portfolio">
+
+
+                <div class="project">
+
+                    <div>
+
+                        <div class="project-icon">✨</div>
+
+                        <h3>
+                            LUMÉA — Instagram Campaign
+                        </h3>
+
+                        <p>
+                            Fictional beauty brand campaign
+                            concept created with AI-assisted
+                            creative tools.
+                        </p>
+
+                    </div>
+
+                    <a
+                        href="LUMÉA_Instagram_Campaign_Post.html"
+                        target="_blank"
+                        class="project-link">
+
+                        View Project →
+
+                    </a>
+
                 </div>
-                <button onclick="closeCollectionDrawer()" class="w-8 h-8 rounded-full bg-zinc-800 flex items-center justify-center text-zinc-400 hover:text-white">
-                    <i data-lucide="x" class="w-4 h-4"></i>
-                </button>
+
+
+                <div class="project">
+
+                    <div>
+
+                        <div class="project-icon">🖤</div>
+
+                        <h3>
+                            NOIRÉ — TikTok Campaign
+                        </h3>
+
+                        <p>
+                            Fashion-focused TikTok campaign
+                            concept created as an AI-assisted
+                            design project.
+                        </p>
+
+                    </div>
+
+                    <a
+                        href="NOIRÉ_TikTok_Campaign_Concept.html"
+                        target="_blank"
+                        class="project-link">
+
+                        View Project →
+
+                    </a>
+
+                </div>
+
             </div>
 
-            <!-- Product Items List -->
-            <div class="space-y-4">
-                <div class="flex items-center space-x-4 bg-zinc-950/60 p-3 rounded-2xl border border-zinc-800/80">
-                    <div class="w-16 h-20 rounded-xl bg-zinc-800 flex items-center justify-center overflow-hidden shrink-0">
-                        <div class="w-8 h-12 bg-zinc-900 rounded border border-zinc-700"></div>
-                    </div>
-                    <div class="flex-1">
-                        <h5 class="text-sm font-semibold text-white font-editorial">Midnight Silk Trench</h5>
-                        <p class="text-xs text-zinc-400 mt-0.5">Custom heavyweight Italian silk</p>
-                        <p class="text-sm font-bold text-white mt-2">$850</p>
-                    </div>
-                    <button onclick="showNotification('Added to Bag')" class="px-4 py-2 bg-white text-black text-xs font-semibold rounded-lg hover:bg-zinc-200 transition">
-                        Select
-                    </button>
-                </div>
-
-                <div class="flex items-center space-x-4 bg-zinc-950/60 p-3 rounded-2xl border border-zinc-800/80">
-                    <div class="w-16 h-20 rounded-xl bg-zinc-800 flex items-center justify-center overflow-hidden shrink-0">
-                        <div class="w-8 h-12 bg-zinc-900 rounded border border-zinc-700"></div>
-                    </div>
-                    <div class="flex-1">
-                        <h5 class="text-sm font-semibold text-white font-editorial">The Eclipse Gown</h5>
-                        <p class="text-xs text-zinc-400 mt-0.5">Asymmetric structured noir finish</p>
-                        <p class="text-sm font-bold text-white mt-2">$1,200</p>
-                    </div>
-                    <button onclick="showNotification('Added to Bag')" class="px-4 py-2 bg-white text-black text-xs font-semibold rounded-lg hover:bg-zinc-200 transition">
-                        Select
-                    </button>
-                </div>
-            </div>
-
-            <div class="mt-6 pt-4 border-t border-zinc-800 text-center">
-                <button onclick="closeCollectionDrawer(); showNotification('Redirecting to noire-official.com...');" class="w-full py-3 bg-zinc-800 hover:bg-zinc-700 text-white rounded-xl text-xs font-semibold tracking-widest uppercase transition">
-                    Visit Full Storefront
-                </button>
-            </div>
         </div>
-    </div>
 
-    <!-- Notification Toast -->
-    <div id="toast" class="fixed top-8 left-1/2 -translate-x-1/2 z-50 bg-white text-black px-5 py-2.5 rounded-full text-xs font-semibold tracking-wider shadow-2xl opacity-0 pointer-events-none transition-opacity duration-300">
-        Notification
-    </div>
 
-    <!-- Script Interactions -->
-    <script>
-        // Initialize Lucide Icons
-        lucide.createIcons();
+        <!-- GRAPHIC DESIGN -->
 
-        let isPlaying = true;
-        let isAudioMuted = false;
+        <div class="portfolio-category">
 
-        function togglePlayState() {
-            isPlaying = !isPlaying;
-            const overlay = document.getElementById('playStateOverlay');
-            const visual = document.getElementById('editorialVisual');
-            
-            if (!isPlaying) {
-                overlay.style.opacity = '1';
-                visual.style.transform = 'scale(1)';
-            } else {
-                overlay.style.opacity = '0';
-                visual.style.transform = 'scale(1.05)';
-            }
-        }
+            <h3 class="category-title">
+                🎨 Graphic Design
+            </h3>
 
-        function toggleAudio() {
-            isAudioMuted = !isAudioMuted;
-            const btn = document.getElementById('audioBtn');
-            if (isAudioMuted) {
-                btn.innerHTML = '<i data-lucide="volume-x" class="w-4 h-4 text-red-400"></i>';
-                showNotification('Audio Muted');
-            } else {
-                btn.innerHTML = '<i data-lucide="volume-2" class="w-4 h-4"></i>';
-                showNotification('Audio Playing');
-            }
-            lucide.createIcons();
-        }
+            <div class="portfolio">
 
-        function toggleLike(btn) {
-            const icon = btn.querySelector('i');
-            const countSpan = btn.nextElementSibling;
-            if (btn.classList.contains('liked')) {
-                btn.classList.remove('liked');
-                icon.classList.remove('text-red-500', 'fill-red-500');
-            } else {
-                btn.classList.add('liked');
-                icon.classList.add('text-red-500', 'fill-red-500');
-                showNotification('Added to liked videos');
-            }
-        }
 
-        function toggleBookmark(btn) {
-            const icon = btn.querySelector('i');
-            if (btn.classList.contains('saved')) {
-                btn.classList.remove('saved');
-                icon.classList.remove('text-amber-400', 'fill-amber-400');
-            } else {
-                btn.classList.add('saved');
-                icon.classList.add('text-amber-400', 'fill-amber-400');
-                showNotification('Saved to your collection');
-            }
-        }
+                <div class="project">
 
-        function openCollectionDrawer() {
-            const modal = document.getElementById('collectionModal');
-            const drawer = document.getElementById('drawerContent');
-            modal.style.opacity = '1';
-            modal.style.pointerEvents = 'auto';
-            drawer.style.transform = 'translateY(0)';
-        }
+                    <div>
 
-        function closeCollectionDrawer() {
-            const modal = document.getElementById('collectionModal');
-            const drawer = document.getElementById('drawerContent');
-            modal.style.opacity = '0';
-            modal.style.pointerEvents = 'none';
-            drawer.style.transform = 'translateY(100%)';
-        }
+                        <div class="project-icon">☕</div>
 
-        function openShareModal() {
-            showNotification('Link copied to clipboard');
-        }
+                        <h3>
+                            MORA — Brand Identity
+                        </h3>
 
-        function openComments() {
-            showNotification('Comments section preview');
-        }
+                        <p>
+                            Fictional coffee brand identity
+                            created as an AI-assisted graphic
+                            design concept.
+                        </p>
 
-        function showNotification(msg) {
-            const toast = document.getElementById('toast');
-            toast.textContent = msg;
-            toast.style.opacity = '1';
-            setTimeout(() => {
-                toast.style.opacity = '0';
-            }, 2500);
-        }
-    </script>
+                    </div>
+
+                    <a
+                        href="MORA_Modern_Coffee_Brand_Identity_Portfolio.html"
+                        target="_blank"
+                        class="project-link">
+
+                        View Project →
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- WEB DESIGN -->
+
+        <div class="portfolio-category">
+
+            <h3 class="category-title">
+                💻 Web Design
+            </h3>
+
+            <div class="portfolio">
+
+
+                <div class="project">
+
+                    <div>
+
+                        <div class="project-icon">🌐</div>
+
+                        <h3>
+                            Ülka Creative Portfolio
+                        </h3>
+
+                        <p>
+                            Personal responsive portfolio website
+                            designed and developed with HTML and CSS.
+                        </p>
+
+                    </div>
+
+                    <a
+                        href="#"
+                        class="project-link">
+
+                        You are here →
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section id="contact" class="contact">
+
+        <h2 class="section-title">
+            Let's work together.
+        </h2>
+
+        <p>
+            Have a project in mind? I'd love to hear about it.
+        </p>
+
+        <a
+            href="mailto:ornek@email.com"
+            class="button">
+
+            Get in Touch
+
+        </a>
+
+    </section>
+
+
+    <footer>
+
+        © 2026 Ülka Creative
+
+    </footer>
+
 </body>
+
 </html>
